@@ -1,0 +1,42 @@
+.loading {
+    animation: spin 2s linear infinite; /* 동작 */
+}
+
+.loader { 
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+}
+
+.rectangle {
+    margin: 80px;
+    padding: 40px;
+    position: fixed;
+    background-color: tomato;
+    text-align: center;
+    align-items: center;
+}
+
+.circle {
+    border: 6px solid #111010;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    animation: changeColor 2s linear infinite
+    /*animation: spin 2s linear infinite; /* 동작 */
+}
+
+@keyframes changeColor {
+    0% { border-color: rgb(255, 0, 0); }
+    25% { border-color: rgb(255, 255, 0); }
+    50% { border-color: rgb(0, 255, 0); }
+    75% { border-color: rgb(0, 0, 255); }
+    100% { border-color: rgb(255, 0, 0); }
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    50% { transform: scale(1.2, 1.2) rotate(180deg); }
+    100% { transform: rotate(360deg); }
+}

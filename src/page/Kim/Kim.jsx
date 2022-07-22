@@ -1,7 +1,13 @@
 import React from "react";
+import Loading from "./week1/Loading";
 
-const Song = () => {
-  return <div>김명서의 페이지 입니다!</div>;
+const Kim = () => {
+  return (
+    <div>
+      <div>김명서의 페이지 입니다!</div>;
+      <div><Loading /></div>
+    </div>
+  )
 };
 
-export default Song;
+export default Kim;
