@@ -1,0 +1,97 @@
+.content2 {
+  /*전역변수*/
+  --bg-color: rgb(0, 0, 0);
+  --element-color: rgb(255, 140, 0);
+  --block-size: 48px;
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.content2 span {
+  z-index: 99;
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: var(--block-size);
+  height: var(--block-size);
+  background-color: rgb(255, 153, 0);
+  clip-path: polygon(
+    50% 0%,
+    100% 25%,
+    100% 75%,
+    50% 100%,
+    0% 75%,
+    0% 25%
+  ); /*TODO polygon*/
+}
+.content2 span::after {
+  width: var(--block-size);
+  height: var(--block-size);
+  content: '';
+  background-color: white;
+  display: block;
+  clip-path: polygon(50% 0%, 100% 25%, 50% 50%, 0% 25%);
+}
+.content2 span:nth-child(1) {
+  transform: translate(0px, -30px);
+  animation: 3s 0.75s ease-in-out infinite low-jump;
+}
+.content2 span:nth-child(2) {
+  transform: translate(25px, -15px);
+  animation: 3s 1s ease-in-out infinite low-jump;
+}
+.content2 span:nth-child(3) {
+  transform: translate(-25px, -15px);
+  animation: 3s 0.5s ease-in-out infinite low-jump;
+}
+.content2 span:nth-child(4) {
+  animation: 3s ease-in-out infinite high-jump;
+}
+.content2 span:nth-child(5) {
+  transform: translate(-50px, 0px);
+  animation: 3s 0.25s ease-in-out infinite low-jump;
+}
+.content2 span:nth-child(6) {
+  transform: translate(50px, 0px);
+  animation: 3s 1.25s ease-in-out infinite low-jump;
+}
+.content2 span:nth-child(7) {
+  transform: translate(25px, 15px);
+  animation: 3s 1.5s ease-in-out infinite low-jump;
+}
+.content2 span:nth-child(8) {
+  transform: translate(-25px, 15px);
+  animation: 3s 2s ease-in-out infinite low-jump;
+}
+.content2 span:nth-child(9) {
+  transform: translate(0px, 30px);
+  animation: 3s 1.75s ease-in-out infinite low-jump;
+}
+/*애니메이션*/
+@keyframes high-jump {
+  0% {
+    top: 50%;
+  }
+  50% {
+    top: calc(50% - 200px); /*TODO calc연산*/
+  }
+  100% {
+    top: 50%;
+  }
+}
+@keyframes low-jump {
+  0% {
+    top: 50%;
+  }
+  5% {
+    top: calc(50% - 100px);
+  }
+  25% {
+    top: 50%;
+  }
+  100% {
+    top: 50%;
+  }
+}

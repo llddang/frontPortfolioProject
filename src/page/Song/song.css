@@ -1,7 +1,8 @@
 :root {
   /*전역변수*/
-  --bg-color: rgb(159, 144, 196);
-  --main-color: rgb(246, 216, 193);
+  --bg-color: rgb(246, 226, 174);
+  --main-color: rgb(42, 132, 156);
+  --point-color: rgb(21, 74, 106);
   color: rgb(0, 0, 0);
 }
 
@@ -13,63 +14,57 @@
 }
 
 .mainDiv {
-  border: 3px solid burlywood;
-  border-radius: 10px;
-  background-color: var(--main-color);
+  /*border: 3px solid var(--point-color);*/
   display: flex;
   flex-direction: column;
   gap: 1rem;
   width: 100%;
   margin: 1rem;
-  padding: 1rem;
   max-width: 60rem;
 }
 
 .project {
-  border: 2px dashed gray;
+  border: 3px solid var(--point-color);
+  background-color: var(--main-color);
   display: inline-block;
+  border-radius: 10px;
+  position: relative;
 }
 .title {
   height: 2em;
   display: flex;
   justify-content: center;
-  position: relative;
   margin: 1em 0;
 }
 .title > p {
   width: 80%;
-  border: 1px solid gray;
+  border: 1px solid var(--point-color);
   border-radius: 30px;
-  background-color: gray;
+  background-color: var(--point-color);
   position: absolute;
-  top: 0.8em;
+  top: 2em;
   z-index: 0;
 }
 .title > span {
   background-color: var(--main-color);
+  font-size: x-large;
   position: absolute;
+  top: 0.6em;
   z-index: 10;
   padding: 0 10px;
 }
 
-@media (max-width: 800px) {
-  /*md*/
-  .mainDiv {
-    background-color: aqua;
-  }
-}
-
 /*스크롤바 ui*/
 :root::-webkit-scrollbar {
-  width: 1em;
-  background-color: rgba(0, 0, 0, 0);
+  width: 10px;
+  background-color: rgba(255, 255, 255, 0);
 }
 :root::-webkit-scrollbar-thumb {
-  background-color: rgb(255, 255, 255, 0.5);
-  border-radius: 5px;
+  background-color: rgb(0, 0, 0, 0.3);
+  border-radius: 10px;
 }
 
 :root::-webkit-scrollbar-track {
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 10px;
 }

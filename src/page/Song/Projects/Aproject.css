@@ -1,4 +1,4 @@
-.content {
+.content1 {
   /*전역변수*/
   --bg-color: rgb(0, 0, 0);
   --element-color: rgb(255, 140, 0);
@@ -8,7 +8,7 @@
   align-items: center;
 }
 
-.hourglass {
+.content1 .hourglass {
   display: block;
   background-color: var(--bg-color);
   width: 2em;
@@ -16,11 +16,11 @@
   animation: hourglass 1s linear infinite;
 }
 
-.outer {
+.content1 .outer {
   /*모래시계 테두리*/
   fill: var(--element-color);
 }
-.middle {
+.content1 .middle {
   /*모래시계 바깥 여백*/
   fill: var(--bg-color);
 }
